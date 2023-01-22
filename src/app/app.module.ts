@@ -14,17 +14,21 @@ import { CuentasComponent } from './cuentas/cuentas.component';
 import { IngresosComponent } from './ingresos/ingresos.component';
 import { SideBarComponent } from '../side-bar/side-bar.component';
 import { TransactionsComponent } from './transactions/transactions.component';
+import { HomeComponent } from './home/home.component';
+import { HttpClientModule } from '@angular/common/http';
+import {AuthService} from "./auth.service";
 
 @NgModule({
   declarations: [
-    AppComponent, LoginComponent, RegisterComponent, AddNewCategoriesComponent, LayoutCategoriesComponent, ButtonComponent, CreateNewCategoryComponent, CuentasComponent, IngresosComponent, SideBarComponent, TransactionsComponent, 
+    AppComponent, LoginComponent, RegisterComponent, AddNewCategoriesComponent, LayoutCategoriesComponent, ButtonComponent, CreateNewCategoryComponent, CuentasComponent, IngresosComponent, SideBarComponent, TransactionsComponent, HomeComponent,
   ],
   imports: [
     FormsModule ,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

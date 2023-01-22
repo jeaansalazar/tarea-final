@@ -1,50 +1,59 @@
 <div class="register">
     <form class="custom-form" method="post">
       <h1>Register</h1>
+
+
+
+      <input
+        type="text"
+        name="last_name"
+        placeholder="Nombres"
+        required="required"
+        [(ngModel)]="first_name"
+      />
+
+      <input
+      type="text"
+      name="last_name"
+      placeholder="Apellido"
+      required="required"
+      [(ngModel)]="last_name"
+    />
+
       <input
         type="email"
         name="email"
         placeholder="Email"
         required="required"
-      />
-      <input
-        type="password"
-        name="password"
-        placeholder="Password"
-        required="required"
+        [(ngModel)]="email"
       />
 
-      <input
-      type="first name"
-      name="first name"
-      placeholder="first name"
-      required="required"
-    />
-
     <input
-      type="password"
-      name="password"
-      placeholder="Password"
-      required="required"
-    />
-
-   
-    <input
-      type="phone"
+      type="tel"
       name="phone"
-      placeholder="phone"
+      placeholder="Telefono"
       required="required"
+      [(ngModel)]="phone"
     />
 
       <input
         type="password"
         name="password"
-        placeholder="Repeat the password"
+        placeholder="Contraseña"
         required="required"
+        [(ngModel)]="password"
       />
-      <button type="submit" >SIGN UP</button> 
-      <button routerLink="/login">login</button> </form>
-      
+
+      <input
+        type="password"
+        name="password"
+        placeholder="Repetir contraseña"
+        required="required"
+        [(ngModel)]="confirm_password"
+      />
+      <button type="submit" (click)="register()" style="background-color: #bcd8c1; margin-bottom: 2.5rem">REGISTRAR</button>
+      <button routerLink="/login" style="background-color: #eeb8dc; margin-bottom: 1rem">INICIAR SESION</button> </form>
+
 
 
   </div>

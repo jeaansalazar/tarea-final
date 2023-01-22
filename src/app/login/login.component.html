@@ -6,15 +6,18 @@
         name="email"
         placeholder="Email"
         required="required"
+        [(ngModel)]="email"
       />
       <input
         type="password"
         name="password"
         placeholder="Password"
         required="required"
+        [(ngModel)]="password"
       />
-      
-      <button type="submit" routerLink="/log-in">log in</button>
+
+      <button type="submit" (click)="login()" style="background-color: #eeb8dc; margin-bottom: 2.5rem">INICIAR SESION</button>
+      <button routerLink="/register" style="background-color: #bcd8c1; margin-bottom: 1rem">REGISTRAR</button>
 
     </form>
   </div>
