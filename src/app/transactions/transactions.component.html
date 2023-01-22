@@ -1,0 +1,132 @@
+<div class="transaction">
+    <div class="titulo">
+      <h2>Transaction</h2>
+      <div class="icon-filter" (click)="handleClickIconFilter()">
+        <i class="fa-solid fa-filter"></i>
+      </div>
+    </div>
+  
+    <div class="filters" *ngIf="isFilters">
+      <h2>Category</h2>
+  
+      <div class="category-section">
+        <label for="rent">
+          <input
+            (click)="handleChangeInput($event)"
+            type="checkbox"
+            id="rent"
+            value="rent"
+            data-filter="category"
+          />
+          Rent
+        </label>
+        <label for="salary">
+          <input
+            (click)="handleChangeInput($event)"
+            type="checkbox"
+            id="salary"
+            value="salary"
+            data-filter="category"
+          />
+          Salary
+        </label>
+        <label for="transport">
+          <input
+            (click)="handleChangeInput($event)"
+            type="checkbox"
+            id="transport"
+            value="transport"
+            data-filter="category"
+          />
+          Transport
+        </label>
+        <label for="education">
+          <input
+            (click)="handleChangeInput($event)"
+            type="checkbox"
+            id="education"
+            value="education"
+            data-filter="category"
+          />
+          Education
+        </label>
+        <label for="grocery">
+          <input
+            (click)="handleChangeInput($event)"
+            type="checkbox"
+            id="grocery"
+            value="grocery"
+            data-filter="category"
+          />
+          Groceries
+        </label>
+        <label for="gift">
+          <input
+            (click)="handleChangeInput($event)"
+            type="checkbox"
+            id="gift"
+            value="gift"
+            data-filter="category"
+          />
+          Gift
+        </label>
+      </div>
+  
+      <h2>Amount</h2>
+      <div class="amount-section">
+        <div>
+          <label>MIN</label>
+          <input
+            type="number"
+            value="0"
+            min="0"
+            name="min"
+            [(ngModel)]="filterApplieds.amount.min"
+            data-filter="amount"
+          />
+        </div>
+        <div>
+          <label>MAX</label>
+          <input
+            type="number"
+            value="4000"
+            name="max"
+            (input)="handleMonto($event)"
+            [(ngModel)]="filterApplieds.amount.max"
+            data-filter="amount"
+          />
+        </div>
+      </div>
+  
+      <h2>Date</h2>
+      <div class="amount-section">
+        <div>
+          <label>FROM</label>
+          <input type="date" />
+        </div>
+        <div>
+          <label>TO</label>
+          <input type="date" />
+        </div>
+      </div>
+    </div>
+  
+    <div class="gastos">
+      <div *ngFor="let transaction of transactions">
+        <app-cuentas
+          [indice]="transaction.date"
+          [fecha1]="transaction.date"
+          [fecha2]="transaction.date"
+          [cantidad]="transaction.total"
+        ></app-cuentas>
+        <app-ingresos
+          *ngFor="let move of transaction.moves"
+          [cantidad]="move.mount"
+          [name]="move.category"
+          [icon]="move.icon"
+          [color]="move.color"
+        ></app-ingresos>
+      </div>
+    </div>
+  </div>
+  

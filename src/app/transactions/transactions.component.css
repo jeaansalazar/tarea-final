@@ -1,0 +1,92 @@
+h2 {
+    font-family: inter;
+  }
+  
+  .transaction {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-left: 2px solid var(--color-gray-dark-separator);
+    align-items: center;
+    overflow-y: scroll;
+  }
+  
+  .titulo {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #fafafa;
+    margin-bottom: 20px;
+  }
+  
+  .gastos {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 100%;
+  }
+  
+  .icon-filter {
+    cursor: pointer;
+  }
+  
+  .filters {
+    margin-bottom: 15px;
+    width: 100%;
+  }
+  
+  .category-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-top: 15px;
+  }
+  
+  .category-section label {
+    margin: 8px 16px;
+    cursor: pointer;
+  }
+  
+  .amount-section {
+    display: flex;
+    padding: 20px;
+  }
+  
+  .amount-section input {
+    border-radius: 7px;
+    height: 45px;
+    width: 180px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-right: 20px;
+    border-color: darkgray;
+    font-size: 20px;
+  }
+  
+  .amount-section input{
+    border-radius: 7px;
+    height: 45px;
+    width: 180px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-right: 20px;
+    border-color: darkgray;
+    font-size: 20px;
+  }
+  
+  .category-section label {
+    display: flex;
+    margin: 8px 16px;
+    cursor: pointer;
+    justify-content: center;
+  }
+  
+  .category-section input{
+    margin-right: 5px;
+    height: 20px;
+    width: 20px;
+  }
+  

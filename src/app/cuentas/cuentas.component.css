@@ -1,0 +1,38 @@
+.cuentas {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    font-family: sans-serif;
+    background-color: #fafafa;
+  }
+  
+  .fecha {
+    display: flex;
+    align-items: center;
+  }
+  
+  .fecha > p {
+    font-size: 1.8rem;
+    padding: 10px;
+    font-weight: bold;
+    color: #333d;
+  }
+  
+  .text p:first-child {
+    color: #333a;
+    font-weight: 600;
+  }
+  
+  .text p:last-child {
+    color: #333;
+    font-weight: 600;
+  }
+  
+  .money p {
+    color: #ef4e4e;
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+  

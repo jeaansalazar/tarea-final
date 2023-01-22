@@ -1,0 +1,169 @@
+.container-st {
+    width: 100%;
+    height: 100vh;
+    padding: 60px;
+    font-family: inter;
+    color: var(--color-gray-dark);
+    overflow: scroll;
+    scrollbar-width: none;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+  
+  h1,
+  p,
+  h5 {
+    font-family: inter;
+  }
+  
+  .nav {
+    width: 300px;
+    margin: 10px 0;
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    border-bottom: 3px solid var(--color-gray-dark-separator);
+  }
+  
+  .nav-item {
+    margin-top: 20px;
+    display: flex;
+    padding-bottom: 20px;
+    gap: 10px;
+    align-items: center;
+    position: relative;
+    transition: all 0.5s;
+    cursor: pointer;
+  }
+  
+  .nav-item::after {
+    width: calc(100% + 10px);
+    content: "";
+    position: absolute;
+    border-bottom: 3px solid transparent;
+    bottom: -3px;
+    left: 0;
+  }
+  
+  .nav-item .nav-icon {
+    border: 2px solid var(--color-gray-dark);
+    border-radius: 50%;
+    font-size: 20px;
+    line-height: 17px;
+    width: 20px;
+    text-align: center;
+  }
+  
+  .nav-item {
+    font-weight: 600;
+    color: var(--color-gray-dark);
+    font-size: 1.3rem;
+  }
+  
+  .nav-item:hover,
+  .nav-item--active {
+    color: var(--color-pink);
+  }
+  
+  .nav-item:hover .nav-icon,
+  .nav-item--active .nav-icon {
+    color: var(--color-pink);
+    border: 2px solid var(--color-pink);
+  }
+  
+  .nav-item:hover:after,
+  .nav-item--active:after {
+    border-bottom: 3px solid var(--color-pink);
+  }
+  
+  /* header */
+  
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+  }
+  
+  .header .carrusel {
+    display: flex;
+    align-items: center;
+  }
+  
+  .carrusel .icon-header {
+    width: 40px;
+    height: 40px;
+    background-color: #eee;
+    border-radius: 50%;
+    display: grid;
+    place-content: center;
+    cursor: pointer;
+  }
+  
+  .carrusel .text-header {
+    padding: 10px 20px;
+    background-color: #eee;
+    border-radius: 8px;
+    margin: 0 40px;
+  }
+  
+  .text-header p {
+    color: #666;
+    font-weight: 600;
+    font-size: 1.3rem;
+    cursor: pointer;
+  }
+  
+  .header .prise {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .prise {
+    margin-top: 15px;
+    margin-bottom: 30px;
+  }
+  
+  .prise p {
+    color: #6668;
+    font-weight: 600;
+  }
+  
+  .prise .precio {
+    font-size: 2.8rem;
+    color: var(--color-red);
+    margin: 5px 0;
+  }
+  
+  /* botones */
+  
+  .button-cont {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    place-content: center;
+    gap: 15px;
+  }
+  
+  .add-button {
+    width: 270px;
+    height: 100px;
+    display: grid;
+    place-content: center;
+    border: 2px dashed #6668;
+    border-radius: 8px;
+    transition: all 0.4s;
+    cursor: pointer;
+  }
+  
+  .add-button i {
+    color: #6669;
+    font-size: 1.5rem;
+  }
+  
+  .add-button:hover {
+    scale: 1.06;
+  }
+  
